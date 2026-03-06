@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Sarmex — Инвестируйте в мировые компании из Узбекистана</title>
+    <meta name="description" content="Sarmex — первая инвестиционная платформа для резидентов Узбекистана. Инвестируйте в акции Apple, NVIDIA, Microsoft и других мировых компаний. Скоро запуск!">
+    <meta name="keywords" content="инвестиции Узбекистан, акции США, Apple акции, NVIDIA инвестиции, брокер Узбекистан, Sarmex, инвестиционная платформа">
+    <meta name="author" content="Sarmex">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sarmex.uz/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sarmex.uz/">
+    <meta property="og:title" content="Sarmex — Инвестируйте в мировые компании из Узбекистана">
+    <meta property="og:description" content="Первая инвестиционная платформа для резидентов Узбекистана. Акции Apple, NVIDIA, Tesla и других компаний. Скоро запуск!">
+    <meta property="og:image" content="https://sarmex.uz/og.png">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:logo" content="https://sarmex.uz/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sarmex.uz/">
+    <meta name="twitter:title" content="Sarmex — Инвестируйте в мировые компании из Узбекистана">
+    <meta name="twitter:description" content="Первая инвестиционная платформа для резидентов Узбекистана. Скоро запуск!">
+    <meta name="twitter:image" content="https://sarmex.uz/og.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sarmex",
+        "url": "https://sarmex.uz",
+        "description": "Инвестиционная платформа для резидентов Узбекистана",
+        "foundingDate": "2026",
+        "foundingLocation": "Tashkent, Uzbekistan"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --accent: #22d3ee;
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --text-muted: rgba(255, 255, 255, 0.4);
+            --border: rgba(255, 255, 255, 0.08);
+            --glow: rgba(99, 102, 241, 0.4);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+            animation: gradientMove 20s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(2%, 2%) rotate(1deg); }
+            50% { transform: translate(-1%, 3%) rotate(-1deg); }
+            75% { transform: translate(1%, -2%) rotate(0.5deg); }
+        }
+
+        /* Grid Pattern */
+        .grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            padding: 4px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 72px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto 32px;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .waitlist-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .waitlist-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .waitlist-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px var(--glow);
+        }
+
+        .waitlist-btn {
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .waitlist-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--glow);
+        }
+
+        .waitlist-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-note {
+            font-size: 13px;
+            color: var(--text-muted);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 24px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            color: #22c55e;
+            font-size: 15px;
+            max-width: 480px;
+            margin: 0 auto 32px;
+        }
+
+        .success-message.show {
+            display: flex;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        /* Stock Ticker */
+        .ticker-container {
+            margin-top: 80px;
+            animation: fadeInUp 0.8s ease 0.5s forwards;
+            opacity: 0;
+        }
+
+        .ticker-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .ticker {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .stock-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .stock-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .stock-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stock-info {
+            text-align: left;
+        }
+
+        .stock-symbol {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .stock-price {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .stock-change {
+            font-size: 13px;
+            font-weight: 600;
+            color: #22c55e;
+        }
+
+        .stock-change.negative {
+            color: #ef4444;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            padding: 120px 0;
+            background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.03), transparent);
+        }
+
+        .timeline-track {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-dot {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-dark);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .timeline-item.active .timeline-dot {
+            border-color: var(--primary);
+            background: var(--primary);
+        }
+
+        .timeline-item.completed .timeline-dot {
+            border-color: #22c55e;
+            background: #22c55e;
+        }
+
+        .timeline-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-link {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--text-primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .waitlist-form {
+                flex-direction: column;
+            }
+
+            .waitlist-btn {
+                width: 100%;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ticker {
+                gap: 12px;
+            }
+
+            .stock-card {
+                padding: 10px 16px;
+            }
+
+            .timeline-track {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .timeline-track::before {
+                top: 0;
+                bottom: 0;
+                left: 24px;
+                right: auto;
+                width: 2px;
+                height: auto;
+            }
+
+            .timeline-item {
+                text-align: left;
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            .timeline-dot {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .footer-left {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="grid-pattern"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 1024 1024" 
+                            width="64" height="64"
+                            preserveAspectRatio="xMidYMid meet">
+                            <title>Sarmex Logo</title>
+                            
+                            <!-- Blue rounded rectangle background -->
+                            <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#4F46E5">
+                                <path d="M1850 10175 c-25 -8 -64 -14 -87 -14 -23 -1 -45 -5 -48 -11 -3 -5
+                            -24 -10 -47 -10 -22 0 -52 -6 -66 -14 -35 -17 -125 -46 -146 -46 -9 0 -16 -3
+                            -16 -8 0 -4 -24 -16 -52 -26 -51 -17 -181 -80 -261 -125 -43 -24 -219 -141
+                            -227 -150 -3 -4 -17 -14 -32 -24 -57 -36 -287 -270 -359 -364 -40 -54 -77
+                            -102 -82 -108 -76 -95 -251 -469 -274 -585 -2 -14 -8 -34 -13 -45 -13 -34 -31
+                            -126 -39 -205 -5 -41 -13 -88 -20 -103 -16 -41 -16 -6363 0 -6404 7 -15 15
+                            -62 20 -103 17 -151 27 -212 38 -223 6 -6 11 -20 11 -31 0 -12 7 -34 15 -50 8
+                            -15 15 -37 15 -47 0 -11 4 -27 10 -37 5 -9 17 -35 26 -57 100 -236 232 -447
+                            379 -605 81 -88 214 -220 221 -220 4 0 97 -73 114 -90 11 -11 101 -70 107 -70
+                            4 0 14 -6 22 -14 37 -33 310 -172 386 -196 22 -7 49 -16 60 -21 11 -4 45 -14
+                            75 -22 30 -8 75 -20 100 -27 25 -6 83 -16 130 -20 47 -5 101 -13 120 -19 25
+                            -8 967 -11 3205 -11 2786 0 3178 2 3228 15 32 8 81 15 108 15 28 0 59 5 70 10
+                            10 6 38 15 61 19 24 5 68 16 98 25 30 9 69 21 85 26 92 27 320 134 385 180 15
+                            11 31 20 34 20 4 0 43 26 87 58 44 31 91 64 104 73 62 40 231 203 327 314 69
+                            81 203 284 268 406 26 50 92 217 118 299 45 143 53 178 62 265 5 44 13 93 19
+                            108 8 20 11 978 11 3205 0 2770 -2 3184 -15 3232 -8 30 -15 74 -15 97 0 23 -5
+                            54 -10 69 -6 15 -15 52 -20 83 -18 117 -83 298 -161 451 -97 192 -205 345
+                            -352 496 -239 248 -433 382 -727 503 -58 24 -119 49 -137 57 -17 8 -43 14 -58
+                            14 -14 0 -36 5 -47 11 -11 6 -44 15 -72 19 -28 5 -85 17 -126 26 -70 16 -277
+                            18 -3320 19 -2626 2 -3254 0 -3290 -10z"/>
+                            </g>
+
+                            <!-- White S with arrows -->
+                            <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#FFFFFF">
+                                <path d="M4165 8339 c-382 -38 -762 -193 -1045 -427 -88 -72 -208 -192 -258
+                            -257 -26 -33 -53 -67 -61 -75 -29 -29 -120 -178 -164 -266 -213 -426 -270
+                            -889 -166 -1347 43 -189 145 -435 246 -592 137 -212 333 -413 543 -556 104
+                            -71 250 -157 520 -307 25 -13 81 -46 125 -72 84 -50 281 -162 375 -213 30 -17
+                            87 -50 126 -73 83 -50 331 -192 424 -243 36 -20 122 -69 190 -109 222 -130
+                            381 -222 385 -222 2 0 64 -35 137 -79 73 -43 160 -93 193 -111 33 -18 69 -39
+                            79 -46 23 -16 24 -15 132 161 43 72 101 164 129 206 154 234 183 289 155 289
+                            -5 0 -74 38 -152 84 -179 105 -438 254 -501 289 -47 27 -304 176 -572 333 -77
+                            45 -153 88 -170 97 -16 8 -110 63 -208 121 -98 58 -180 106 -183 106 -2 0 -64
+                            35 -137 79 -72 43 -152 89 -177 103 -347 193 -449 260 -566 371 -178 168 -270
+                            336 -330 597 -25 105 -25 344 0 462 39 190 123 377 225 498 177 211 345 317
+                            621 393 74 21 96 21 1343 24 697 2 1267 1 1267 -2 0 -10 -79 -119 -305 -421
+                            -353 -474 -408 -548 -412 -564 -4 -15 2 -19 124 -86 34 -19 129 -74 210 -122
+                            82 -49 155 -91 163 -95 8 -4 49 -27 90 -51 84 -49 84 -49 134 25 28 42 137
+                            190 306 417 36 49 173 234 305 412 270 365 671 904 739 995 75 99 177 237 193
+                            262 l15 23 -2003 -1 c-1102 -1 -2040 -5 -2084 -10z"/>
+                                <path d="M5380 6870 c-52 -4 -196 -15 -320 -24 -224 -17 -472 -34 -815 -57
+                            -99 -7 -182 -13 -184 -15 -2 -2 25 -65 60 -141 34 -76 81 -183 104 -238 56
+                            -132 145 -334 182 -415 17 -36 49 -108 71 -160 22 -52 54 -126 72 -165 44 -99
+                            46 -104 71 -165 13 -30 30 -67 39 -82 l16 -26 43 71 c95 158 192 312 206 326
+                            10 10 18 11 27 4 7 -6 38 -24 68 -40 30 -16 144 -82 253 -147 109 -64 222
+                            -130 250 -145 29 -16 132 -76 231 -135 98 -58 179 -106 181 -106 5 0 434 -253
+                            525 -309 133 -83 213 -146 295 -233 126 -134 196 -253 253 -428 136 -422 40
+                            -871 -254 -1188 -128 -140 -322 -253 -533 -314 l-76 -22 -1267 -3 c-932 -3
+                            -1268 -1 -1268 8 0 6 9 23 20 37 12 15 98 131 191 257 94 127 179 241 189 255
+                            21 28 48 64 138 182 128 169 192 258 192 265 0 8 -77 57 -157 100 -23 12 -100
+                            56 -170 96 -70 41 -175 102 -233 135 -57 33 -108 58 -112 56 -5 -3 -103 -132
+                            -220 -287 -116 -155 -222 -295 -234 -312 -13 -16 -65 -86 -116 -155 -52 -69
+                            -114 -152 -139 -185 -25 -33 -140 -186 -255 -340 -115 -154 -214 -287 -221
+                            -295 -76 -98 -435 -584 -440 -595 -5 -14 214 -15 2053 -12 1622 2 2073 5 2124
+                            16 232 45 368 87 525 161 207 96 348 195 522 364 164 158 239 255 346 446 87
+                            154 138 273 173 405 130 486 87 980 -125 1416 -75 157 -153 274 -275 416 -116
+                            135 -223 229 -376 331 -120 80 -133 88 -218 137 -29 17 -199 117 -378 223
+                            -179 105 -328 192 -331 192 -3 0 -82 46 -176 103 -95 57 -255 152 -357 212
+                            -102 59 -191 113 -198 120 -10 9 7 44 90 176 57 90 114 181 127 202 l23 37
+                            -59 -2 c-32 -1 -101 -5 -153 -8z"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <span class="logo-text">Sarmex</span>
+                </a>
+                <nav class="nav-links">
+                    <a href="#features" class="nav-link">Возможности</a>
+                    <a href="#timeline" class="nav-link">Roadmap</a>
+                    <div class="lang-switch">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="uz">UZ</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Запуск Q1 2026
+                </div>
+                
+                <h1>
+                    Инвестируйте в<br>
+                    <span class="gradient-text">мировые компании</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Первая инвестиционная платформа для резидентов Узбекистана. 
+                    Покупайте акции Apple, NVIDIA, Tesla и тысячи других компаний 
+                    прямо с телефона.
+                </p>
+                
+                <form class="waitlist-form" id="waitlistForm">
+                    <div class="input-wrapper">
+                        <input 
+                            type="email" 
+                            class="waitlist-input" 
+                            placeholder="Введите ваш email"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="waitlist-btn">
+                        Получить доступ
+                    </button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="currentColor"/>
+                    </svg>
+                    <span>Вы в списке! Мы сообщим о запуске.</span>
+                </div>
+                
+                <p class="form-note">
+                    Присоединяйтесь к 2,500+ инвесторам в списке ожидания
+                </p>
+                
+                <div class="ticker-container">
+                    <p class="ticker-label">Доступные компании</p>
+                    <div class="ticker">
+                        <div class="stock-card">
+                            <div class="stock-logo">🍎</div>
+                            <div class="stock-info">
+                                <div class="stock-symbol">AAPL</div>
+                                <div class="stock-price">$185.92</div>
+                            </div>
+                            <div class="stock-change">+1.24%</div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-logo">💚</div>
+                            <div class="stock-info">
+                                <div class="stock-symbol">NVDA</div>
+                                <div class="stock-price">$875.28</div>
+                            </div>
+                            <div class="stock-change">+2.87%</div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-logo">🔷</div>
+                            <div class="stock-info">
+                                <div class="stock-symbol">MSFT</div>
+                                <div class="stock-price">$415.50</div>
+                            </div>
+                            <div class="stock-change">+0.92%</div>
+                        </div>
+                        <div class="stock-card">
+                            <div class="stock-logo">🚗</div>
+                            <div class="stock-info">
+                                <div class="stock-symbol">TSLA</div>
+                                <div class="stock-price">$248.42</div>
+                            </div>
+                            <div class="stock-change negative">-1.15%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Почему Sarmex?</h2>
+                <p class="section-subtitle">
+                    Простой и безопасный способ инвестировать в мировой рынок
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Мобильное приложение</h3>
+                    <p class="feature-description">
+                        Удобное приложение для iOS и Android. Покупайте акции 
+                        в несколько касаний, отслеживайте портфель в реальном времени.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">От $1</h3>
+                    <p class="feature-description">
+                        Дробные акции позволяют начать инвестировать с минимальной 
+                        суммы. Купите часть акции Tesla или Apple.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Безопасность</h3>
+                    <p class="feature-description">
+                        Ваши активы защищены SIPC до $500,000. Двухфакторная 
+                        аутентификация и шифрование данных.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">8,000+ акций</h3>
+                    <p class="feature-description">
+                        Доступ к американским и европейским биржам. 
+                        Акции, ETF и другие инструменты.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🇺🇿</div>
+                    <h3 class="feature-title">Для Узбекистана</h3>
+                    <p class="feature-description">
+                        Полностью адаптировано под законодательство. 
+                        Поддержка на узбекском и русском языках.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Быстрый вывод</h3>
+                    <p class="feature-description">
+                        Вывод средств на карты узбекских банков. 
+                        Прозрачные комиссии без скрытых платежей.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Roadmap</h2>
+                <p class="section-subtitle">
+                    Путь к запуску первой инвестиционной платформы
+                </p>
+            </div>
+            
+            <div class="timeline-track animate-on-scroll">
+                <div class="timeline-item completed">
+                    <div class="timeline-dot">✓</div>
+                    <div>
+                        <div class="timeline-date">Январь 2026</div>
+                        <div class="timeline-title">Либерализация рынка</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item active">
+                    <div class="timeline-dot">🔨</div>
+                    <div>
+                        <div class="timeline-date">Февраль 2026</div>
+                        <div class="timeline-title">Разработка MVP</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">🧪</div>
+                    <div>
+                        <div class="timeline-date">Март 2026</div>
+                        <div class="timeline-title">Бета-тестирование</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">🚀</div>
+                    <div>
+                        <div class="timeline-date">Апрель 2026</div>
+                        <div class="timeline-title">Публичный запуск</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a href="/" class="logo">
+                        <div class="logo-icon">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                viewBox="0 0 1024 1024" 
+                                width="64" height="64"
+                                preserveAspectRatio="xMidYMid meet">
+                                <title>Sarmex Logo</title>
+                                
+                                <!-- Blue rounded rectangle background -->
+                                <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#4F46E5">
+                                    <path d="M1850 10175 c-25 -8 -64 -14 -87 -14 -23 -1 -45 -5 -48 -11 -3 -5
+                                -24 -10 -47 -10 -22 0 -52 -6 -66 -14 -35 -17 -125 -46 -146 -46 -9 0 -16 -3
+                                -16 -8 0 -4 -24 -16 -52 -26 -51 -17 -181 -80 -261 -125 -43 -24 -219 -141
+                                -227 -150 -3 -4 -17 -14 -32 -24 -57 -36 -287 -270 -359 -364 -40 -54 -77
+                                -102 -82 -108 -76 -95 -251 -469 -274 -585 -2 -14 -8 -34 -13 -45 -13 -34 -31
+                                -126 -39 -205 -5 -41 -13 -88 -20 -103 -16 -41 -16 -6363 0 -6404 7 -15 15
+                                -62 20 -103 17 -151 27 -212 38 -223 6 -6 11 -20 11 -31 0 -12 7 -34 15 -50 8
+                                -15 15 -37 15 -47 0 -11 4 -27 10 -37 5 -9 17 -35 26 -57 100 -236 232 -447
+                                379 -605 81 -88 214 -220 221 -220 4 0 97 -73 114 -90 11 -11 101 -70 107 -70
+                                4 0 14 -6 22 -14 37 -33 310 -172 386 -196 22 -7 49 -16 60 -21 11 -4 45 -14
+                                75 -22 30 -8 75 -20 100 -27 25 -6 83 -16 130 -20 47 -5 101 -13 120 -19 25
+                                -8 967 -11 3205 -11 2786 0 3178 2 3228 15 32 8 81 15 108 15 28 0 59 5 70 10
+                                10 6 38 15 61 19 24 5 68 16 98 25 30 9 69 21 85 26 92 27 320 134 385 180 15
+                                11 31 20 34 20 4 0 43 26 87 58 44 31 91 64 104 73 62 40 231 203 327 314 69
+                                81 203 284 268 406 26 50 92 217 118 299 45 143 53 178 62 265 5 44 13 93 19
+                                108 8 20 11 978 11 3205 0 2770 -2 3184 -15 3232 -8 30 -15 74 -15 97 0 23 -5
+                                54 -10 69 -6 15 -15 52 -20 83 -18 117 -83 298 -161 451 -97 192 -205 345
+                                -352 496 -239 248 -433 382 -727 503 -58 24 -119 49 -137 57 -17 8 -43 14 -58
+                                14 -14 0 -36 5 -47 11 -11 6 -44 15 -72 19 -28 5 -85 17 -126 26 -70 16 -277
+                                18 -3320 19 -2626 2 -3254 0 -3290 -10z"/>
+                                </g>
+
+                                <!-- White S with arrows -->
+                                <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#FFFFFF">
+                                    <path d="M4165 8339 c-382 -38 -762 -193 -1045 -427 -88 -72 -208 -192 -258
+                                -257 -26 -33 -53 -67 -61 -75 -29 -29 -120 -178 -164 -266 -213 -426 -270
+                                -889 -166 -1347 43 -189 145 -435 246 -592 137 -212 333 -413 543 -556 104
+                                -71 250 -157 520 -307 25 -13 81 -46 125 -72 84 -50 281 -162 375 -213 30 -17
+                                87 -50 126 -73 83 -50 331 -192 424 -243 36 -20 122 -69 190 -109 222 -130
+                                381 -222 385 -222 2 0 64 -35 137 -79 73 -43 160 -93 193 -111 33 -18 69 -39
+                                79 -46 23 -16 24 -15 132 161 43 72 101 164 129 206 154 234 183 289 155 289
+                                -5 0 -74 38 -152 84 -179 105 -438 254 -501 289 -47 27 -304 176 -572 333 -77
+                                45 -153 88 -170 97 -16 8 -110 63 -208 121 -98 58 -180 106 -183 106 -2 0 -64
+                                35 -137 79 -72 43 -152 89 -177 103 -347 193 -449 260 -566 371 -178 168 -270
+                                336 -330 597 -25 105 -25 344 0 462 39 190 123 377 225 498 177 211 345 317
+                                621 393 74 21 96 21 1343 24 697 2 1267 1 1267 -2 0 -10 -79 -119 -305 -421
+                                -353 -474 -408 -548 -412 -564 -4 -15 2 -19 124 -86 34 -19 129 -74 210 -122
+                                82 -49 155 -91 163 -95 8 -4 49 -27 90 -51 84 -49 84 -49 134 25 28 42 137
+                                190 306 417 36 49 173 234 305 412 270 365 671 904 739 995 75 99 177 237 193
+                                262 l15 23 -2003 -1 c-1102 -1 -2040 -5 -2084 -10z"/>
+                                    <path d="M5380 6870 c-52 -4 -196 -15 -320 -24 -224 -17 -472 -34 -815 -57
+                                -99 -7 -182 -13 -184 -15 -2 -2 25 -65 60 -141 34 -76 81 -183 104 -238 56
+                                -132 145 -334 182 -415 17 -36 49 -108 71 -160 22 -52 54 -126 72 -165 44 -99
+                                46 -104 71 -165 13 -30 30 -67 39 -82 l16 -26 43 71 c95 158 192 312 206 326
+                                10 10 18 11 27 4 7 -6 38 -24 68 -40 30 -16 144 -82 253 -147 109 -64 222
+                                -130 250 -145 29 -16 132 -76 231 -135 98 -58 179 -106 181 -106 5 0 434 -253
+                                525 -309 133 -83 213 -146 295 -233 126 -134 196 -253 253 -428 136 -422 40
+                                -871 -254 -1188 -128 -140 -322 -253 -533 -314 l-76 -22 -1267 -3 c-932 -3
+                                -1268 -1 -1268 8 0 6 9 23 20 37 12 15 98 131 191 257 94 127 179 241 189 255
+                                21 28 48 64 138 182 128 169 192 258 192 265 0 8 -77 57 -157 100 -23 12 -100
+                                56 -170 96 -70 41 -175 102 -233 135 -57 33 -108 58 -112 56 -5 -3 -103 -132
+                                -220 -287 -116 -155 -222 -295 -234 -312 -13 -16 -65 -86 -116 -155 -52 -69
+                                -114 -152 -139 -185 -25 -33 -140 -186 -255 -340 -115 -154 -214 -287 -221
+                                -295 -76 -98 -435 -584 -440 -595 -5 -14 214 -15 2053 -12 1622 2 2073 5 2124
+                                16 232 45 368 87 525 161 207 96 348 195 522 364 164 158 239 255 346 446 87
+                                154 138 273 173 405 130 486 87 980 -125 1416 -75 157 -153 274 -275 416 -116
+                                135 -223 229 -376 331 -120 80 -133 88 -218 137 -29 17 -199 117 -378 223
+                                -179 105 -328 192 -331 192 -3 0 -82 46 -176 103 -95 57 -255 152 -357 212
+                                -102 59 -191 113 -198 120 -10 9 7 44 90 176 57 90 114 181 127 202 l23 37
+                                -59 -2 c-32 -1 -101 -5 -153 -8z"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <span class="logo-text">Sarmex</span>
+                    </a>
+                    <p class="footer-text">© 2026 Sarmex. Все права защищены.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="mailto:info@sarmex.uz" class="footer-link">info@sarmex.uz</a>
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://t.me/sarmex_channel" class="social-link" aria-label="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.099.154.232.17.325.015.093.034.305.019.471z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/sarmex.uz" class="social-link" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = 15 + Math.random() * 10 + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        // Header scroll effect
+        function handleScroll() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+        
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach(el => observer.observe(el));
+        }
+        
+        // Waitlist form submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('waitlistForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Hide form, show success
+            form.style.display = 'none';
+            successMessage.classList.add('show');
+            
+            // Here you would typically send to your backend
+            // fetch('/api/waitlist', { method: 'POST', body: ... })
+        }
+        
+        // Language switch (placeholder)
+        function handleLanguageSwitch(e) {
+            if (e.target.classList.contains('lang-btn')) {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                e.target.classList.add('active');
+                // Add actual language switching logic here
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        function handleSmoothScroll(e) {
+            if (e.target.matches('a[href^="#"]')) {
+                e.preventDefault();
+                const target = document.querySelector(e.target.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            animateOnScroll();
+            
+            window.addEventListener('scroll', handleScroll);
+            document.getElementById('waitlistForm').addEventListener('submit', handleFormSubmit);
+            document.querySelector('.lang-switch').addEventListener('click', handleLanguageSwitch);
+            document.addEventListener('click', handleSmoothScroll);
+        });
+    </script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6ZMD41T9F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-K6ZMD41T9F');
+    </script>
+</body>
+</html>

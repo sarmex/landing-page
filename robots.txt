@@ -1,0 +1,7 @@
+# Robots.txt for sarmex.uz
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sarmex.uz/sitemap.xml
